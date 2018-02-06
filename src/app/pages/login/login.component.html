@@ -12,9 +12,7 @@
             <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" [(ngModel)]="user.password"
                 #password="ngModel" required>
             <div *ngIf="f.submitted && !password.valid" class="alert alert-danger help-block">Password is required</div>
-            <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button> -->
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-        <!-- <div *ngIf="error" class="alert alert-danger">{{error}}</div> -->
     </form>
 </div>

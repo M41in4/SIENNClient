@@ -13,8 +13,8 @@ import { ViewContainerRef } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   
-  private user: any = {};
-  private error: string;
+  user: any = {};
+  error: string;
 
   constructor(
     private authenticationService: AuthenticationService, 
@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
         if (result == true) {
           this.router.navigate(['/home']);
         } else {
-          this.toastr.error('Something went wrong.');
+          this.toastr.error('Something went wrong.', 'Error');
         }
       }, error => {
         this.toastr.error(error, 'Error');

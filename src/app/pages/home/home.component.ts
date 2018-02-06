@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { ProductService, AuthenticationService } from '../../core/index';
 import { Product } from '../../model/index';
 import { Observable } from 'rxjs/Observable';
-import { error } from 'selenium-webdriver';
 import { ToastsManager } from 'ng2-toastr';
 
 @Component({
@@ -13,9 +12,8 @@ import { ToastsManager } from 'ng2-toastr';
 })
 export class HomeComponent implements OnInit {
 
-  private error: string;
-  private user: string;
-  private products: Product[];
+  user: string;
+  products: Product[];
 
   constructor(
     private authenticationService: AuthenticationService,
