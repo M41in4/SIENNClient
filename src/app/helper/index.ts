@@ -1,1 +1,1 @@
-export * from './toast-custom-options'
+export * from './toast-custom-options';

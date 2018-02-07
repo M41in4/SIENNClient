@@ -1,1 +1,1 @@
-export * from './guard.service'
+export * from './guard.service';

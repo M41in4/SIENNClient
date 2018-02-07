@@ -27,9 +27,9 @@ import { ToastCustomOptions } from './helper/index';
     ToastModule.forRoot()
   ],
   providers: [
-    AuthenticationService, 
-    GuardService, 
-    ProductService, 
+    AuthenticationService,
+    GuardService,
+    ProductService,
     { provide: ToastOptions, useClass: ToastCustomOptions }
   ],
   bootstrap: [ AppComponent ]

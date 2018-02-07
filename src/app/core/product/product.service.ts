@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers,  Response, RequestOptions } from '@angular/http';
-import { HttpParams, HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Product } from '../../model/index';
 
@@ -22,7 +21,7 @@ export class ProductService {
       .map((response: Response) => {
         return response.json() || {};
       })
-      .catch(this.handleError)
+      .catch(this.handleError);
   }
 
   private handleError(error: Response | any) {

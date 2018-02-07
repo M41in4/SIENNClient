@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers,  Response, RequestOptions } from '@angular/http';
-import { HttpParams, HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 
@@ -17,7 +16,7 @@ export class AuthenticationService {
 
   constructor(private http: Http) {
       // set token if saved in local storage
-      var token = JSON.parse(localStorage.getItem('currentUser'));
+      const token = JSON.parse(localStorage.getItem('currentUser'));
       this.token = token;
   }
 
@@ -30,7 +29,7 @@ export class AuthenticationService {
     return this.http.post(url, formData)
     .map((response: Response) => {
       // login successful if there's a jwt token in the response
-      let token = response.json().access_token;
+      const token = response.json().access_token;
       if (token) {
           // set token property
           this.token = token;

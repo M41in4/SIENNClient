@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private authenticationService: AuthenticationService,
-    private productService: ProductService, 
+    private productService: ProductService,
     private router: Router,
     private toastr: ToastsManager,
     private vcr: ViewContainerRef
@@ -42,6 +42,6 @@ export class HomeComponent implements OnInit {
         this.toastr.success('Products are loaded successfully.', 'Success');
       }, error => {
         this.toastr.error(error, 'Error');
-      })
+      });
   }
 }
